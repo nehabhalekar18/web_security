@@ -51,7 +51,7 @@ function onLogin(){
     xhr.open("POST", "https://demo.testfire.net/doLogin", true);    
 
     xhr.send(JSON.stringify({
-        uid: uid,passw:pwd
+        uid: uid,passw:pwd,btnSubmit:"Login"
     }));
          alert(xhr.responseText);
        // var url1="https://demo.testfire.net/doLogin?uid=admin&passw=admin&btnSubmit=Login";
