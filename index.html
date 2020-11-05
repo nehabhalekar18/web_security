@@ -53,7 +53,7 @@ function onLogin(){
     xhr.send(JSON.stringify({
         uid: uid,passw:pwd,btnSubmit:"Login"
     }));
-         alert(xhr.responseText);
+         alert("Response: ",xhr.responseText);
        // var url1="https://demo.testfire.net/doLogin?uid=admin&passw=admin&btnSubmit=Login";
      //   window.location.href="https://demo.testfire.net/bank/main.jsp";
      //window.location.href="https://demo.testfire.net/bank/main.jsp?uid='admin'&passw='admin'";
