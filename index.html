@@ -47,8 +47,13 @@ function onLogin(){
       var data = JSON.parse(this.responseText);
        // var url1="https://demo.testfire.net/bank/main.jsp?uid='"+uid+"'&passw='"+pwd+"'";
        // alert(url1);
-        var url1="https://demo.testfire.net/doLogin?uid=admin&passw=admin&btnSubmit=Login";
-        xhr.setRequestHeader("Referer","https://demo.testfire.net/login.jsp")
+        var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://demo.testfire.net/doLogin", true);    
+
+    xhr.send(JSON.stringify({
+        uid: uid,passw:pwd
+    }));
+       // var url1="https://demo.testfire.net/doLogin?uid=admin&passw=admin&btnSubmit=Login";
         window.location.href="https://demo.testfire.net/bank/main.jsp";
      //window.location.href="https://demo.testfire.net/bank/main.jsp?uid='admin'&passw='admin'";
     }
